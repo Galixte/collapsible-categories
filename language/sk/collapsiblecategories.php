@@ -2,7 +2,7 @@
 /**
  *
  * Collapsible Categories extension for the phpBB Forum Software package.
- * French translation by Galixte (http://www.galixte.com)
+ * Slovak translation by Senky (https://github.com/senky)
  *
  * @copyright (c) 2015 phpBB Limited <https://www.phpbb.com>
  * @license GNU General Public License, version 2 (GPL-2.0)
@@ -35,9 +35,9 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 //
 // Some characters you may want to copy&paste:
-// ’ « » “ ” …
+// ’ » “ ” …
 //
 
 $lang = array_merge($lang, array(
-	'COLLAPSIBLE_CATEGORIES_TITLE'		=> 'Afficher / masquer le contenu de cette catégorie',
+	'COLLAPSIBLE_CATEGORIES_TITLE'		=> 'Prepnúť viditeľnosť tejto kategórie',
 ));
