@@ -53,7 +53,6 @@ class simple_test extends \phpbb_test_case
 
 		return array(
 			// Versions less than the requirement
-			array('3.1', false),
 			array('3.1.0', false),
 			array('3.1.1', false),
 			array('3.1.1.1', false),
@@ -65,7 +64,6 @@ class simple_test extends \phpbb_test_case
 			array($req_version, true),
 			array($req_version . '-PL1', true),
 			array($req_version . '.1', true),
-			array('3.2', true),
 			array('3.2.0', true),
 		);
 	}
@@ -88,10 +86,10 @@ class simple_test extends \phpbb_test_case
 
 		// Mocked container should return the config object
 		// when encountering $this->container->get('config')
-		$this->container->expects($this->any())
+		$this->container->expects($this->once())
 			->method('get')
 			->with('config')
-			->will($this->returnValue($config));
+			->willReturn($config);
 
 		/** @var \phpbb\collapsiblecategories\ext */
 		$ext = new \phpbb\collapsiblecategories\ext($this->container, $this->extension_finder, $this->migrator, 'phpbb/collapsiblecategories', '');
